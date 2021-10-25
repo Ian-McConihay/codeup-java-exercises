@@ -8,6 +8,13 @@ public class HelloWorld {
         System.out.println(myString);
 //        long myNumber;
 //        java: variable myNumber might not have been initialized
+        float aNumber = (float) 3.14;
+        long bNumber = (long) aNumber;
+        System.out.println(bNumber);
+
+
+
+
         long myNumber = 123l;
         myNumber = 123;
         System.out.println(myNumber);
@@ -27,7 +34,9 @@ public class HelloWorld {
 //        String theNumberThree = "three";
 //        Object o = theNumberThree;
 //        int three = (int) o;
+// Object is the biggest level. You can assign vars to an object
 
+//        objects our molecule
 //        int three = (int) "three";
 
 //
@@ -36,14 +45,15 @@ public class HelloWorld {
 //
 //        int x = 3;
 //        int y = 4;
-//        y = y * x;
+//        y *= x;
 //
 //        int x = 10;
 //        int y = 2;
-//        x = x / y;
-//        y = y - x
+//        x /= y;
+//        y -= x
 
 //final = const
-
+        int  myMinIntValue = Integer.MIN_VALUE;
+        int  myMaxIntValue = Integer.MAX_VALUE;
     }
 }

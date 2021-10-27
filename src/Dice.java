@@ -1,69 +1,62 @@
 import java.util.Scanner;
 public class Dice {
 	public static void main(String[] args){
-
-
-		public static void diceRoll() {
-			Scanner scanner = new Scanner(System.in);
-			System.out.println("Would you like to add, subtract, multiply, or divide?");
-			String input = scanner.next();
-			System.out.println("Input two numbers e.g. x x ");
-			float num1 = scanner.nextFloat();
-			float num2 = scanner.nextFloat();
-			calculateDice(num1, num2, input);
-
-
-			int min = 50;
-			int max = 100;
-			//Generate random int value from 50 to 100
-			System.out.println("Random value in int from "+min+" to "+max+ ":");
-			int random_int = (int)Math.floor(Math.random()*(max-min+1)+min);
-			System.out.println(random_int);
-		}
+	diceRoll();
 	}
 
+	public static void diceRoll() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Would you like to D4, D6, D10, or D20?");
+		String input = scanner.next();
+		calculateDice(input);
+	}
 
-
-		public static void calculateDice(float num1, float num2, String input) {
+		public static void calculateDice(String input) {
 			switch (input) {
 				case "D4":
-					System.out.println("Sum: " + add(num1, num2));
+					System.out.println("You rolled: " + D4());
 					break;
 				case "D6":
-					System.out.println("Difference: " + subtract(num1, num2));
+					System.out.println("You rolled: " + D6());
 					break;
 				case "D10":
-					System.out.println("Product: " + multiply(num1, num2));
+					System.out.println("You rolled: " + D10());
 					break;
 				case "D20":
-					System.out.println("Dividend: " + divide(num1, num2));
+					System.out.println("You rolled: " + D20());
 					break;
 				default:
-					System.out.println("idk how we got here, fam");
+					System.out.println(".....Pick a dice");
 					break;
 			}
 		}
 
-//        "Sum: " + add(num1, num2)
+	public static int D4() {
+		int min = 1;
+		int max = 4;
+		int random_int = (int)Math.floor(Math.random()*(max-min+1)+min);
+		return random_int;
+	}
+	public static int D6() {
+		int min = 1;
+		int max = 6;
+		int random_int = (int)Math.floor(Math.random()*(max-min+1)+min);
+		return random_int;
+	}
 
+	public static int D10() {
+		int min = 1;
+		int max = 10;
+		int random_int = (int)Math.floor(Math.random()*(max-min+1)+min);
+		return random_int;
+	}
 
-		public static float add(float num1, float num2) {
-			return num1 + num2;
-		}
-
-		public static float subtract(float num1, float num2) {
-			return num1 - num2;
-		}
-
-		public static float multiply(float num1, float num2) {
-			return num1 * num2;
-		}
-
-		public static float divide(float num1, float num2) {
-			return num1 / num2;
-		}
-
-
+	public static int D20() {
+		int min = 1;
+		int max = 20;
+		int random_int = (int)Math.floor(Math.random()*(max-min+1)+min);
+		return random_int;
+	}
 
 
 

@@ -1,3 +1,5 @@
+import util.Input;
+
 public class Person {
 	private String name;
 
@@ -12,14 +14,17 @@ public class Person {
 	this.name = name;
 	}
 
-	public String sayHello() {
-		return "Hello from " + getName() + "!";
+	public void sayHello() {
+		System.out.println( "Hello from " + getName() + "!");
 	}
 	public static void main(String[] args) {
-
-		Person personOne = new Person("Ian");
-		personOne.setName("Ian");
-		System.out.println(personOne.sayHello());
+		Input in = new Input();
+		System.out.println("Give me a string");
+		String getString = in.getString();
+		System.out.println(getString);
+//		Person personOne = new Person("Ian");
+//		personOne.setName("Ian");
+//		personOne.sayHello();
 
 
 //		Person person1 = new Person("John");

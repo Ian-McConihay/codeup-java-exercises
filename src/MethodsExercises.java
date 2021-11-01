@@ -68,17 +68,26 @@ public class MethodsExercises {
 //    }
 
 
-    public static void getInteger() {
-        Scanner scanner = new Scanner(System.in);
-        int userNum = scanner.nextInt();
-        int min = 1;
-        int max = 10;
-        boolean goodNum;
-        goodNum = (min > userNum) && (userNum > max);
-        if(goodNum)
-        System.out.println("Thanks");
+//    public static void getInteger() {
+//        Scanner scanner = new Scanner(System.in);
+//        int userNum = scanner.nextInt();
+//        int min = 1;
+//        int max = 10;
+//        boolean goodNum;
+//        goodNum = (min > userNum) && (userNum > max);
+//        if(goodNum)
+//        System.out.println("Thanks");
+//        }
+    public static int getInteger(int min, int max) {
+        int userNum;
+        Scanner sc = new Scanner(System.in);
+        userNum = sc.nextInt();
+        boolean validNum = ((userNum <= max) && (userNum >= min));
+        if (!validNum){
+            System.out.println("Not a valid number.");
         }
-
+        return userNum;
+    }
 
 
     public static long factorial(int userNum){
@@ -92,7 +101,13 @@ public class MethodsExercises {
          System.out.println("Here is the factorial of your number ");
         return result;
     }
-
+//    public static long factorial (int userInput) {
+//        long result = 1;
+//        for (int i = 1; i <= userInput ; i++) {
+//            result *= i;
+//        }
+//        return result;
+//    }
 
 
 

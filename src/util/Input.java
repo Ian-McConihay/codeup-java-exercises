@@ -12,13 +12,23 @@ public String getString(){
 }
 public boolean yesNo(){
 
-	case "yes":
-	yn = false;
-	break;
-	case "no":
-	yn = true;
-	break;
-	return scanner.hasNext();
+	if (scanner.hasNext("y")) {
+		return true;
+	} else if (scanner.hasNext("yes")) {
+		return true;
+	} else if (scanner.hasNext("Y")) {
+		return true;
+	} else if (scanner.nextLine().equalsIgnoreCase("yes")) {
+		return true;
+	}
+	return false;
+//	case "yes":
+//	yn = false;
+//	break;
+//	case "no":
+//	yn = true;
+//	break;
+//	return scanner.hasNext();
 //	return Boolean.parseBoolean(scanner.nextLine());
 }
 public int getInt(int min, int max){

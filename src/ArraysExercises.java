@@ -31,11 +31,11 @@ public class ArraysExercises {
 
 
 //		Arrays.fill was for a single value
-		Arrays.fill(backpack, "med-kit");
-		System.out.println(backpack);
-		for(String pack : backpack){
-			System.out.println(pack);
-		}
+//		Arrays.fill(backpack, "med-kit");
+//		System.out.println(backpack);
+//		for(String pack : backpack){
+//			System.out.println(pack);
+//		}
 //Searching in an array
 
 
@@ -45,15 +45,18 @@ public class ArraysExercises {
 				{4, 5, 6}, //arr2
 				{7, 8, 9} //arr3 these are the ELEMENTS of the outer array
 		};
+		System.out.println("martix[0] = " + Arrays.toString(matrix[0]));
+		System.out.println("martix[0][0] = " + matrix[0][0]);
 		for(int[] row : matrix){
 			System.out.println("+---+---+---+");
-			System.out.println("| ");
+			System.out.print("| ");
 			for (int n : row) {
 				System.out.print(n + " | ");
 			}
 			System.out.println();
-		}
 
+		}
+		System.out.println("+---+---+---+");
 
 //		Exercise
 		int[] numbers = {1, 2, 3, 4, 5};

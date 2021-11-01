@@ -17,7 +17,7 @@ public class Person {
 	public void sayHello() {
 		System.out.println( "Hello from " + getName() + "!");
 	}
-	public static void main(String[] args) {
+	public static void main(String args) {
 		Input in = new Input();
 		System.out.println("Give me a string");
 		String getString = in.getString();

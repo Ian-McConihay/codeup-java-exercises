@@ -1,72 +1,35 @@
 import java.util.Arrays;
+
 public class ArraysExercises {
 
-
-
-	public static void main(String[] args){
-//		Number Arrays
-		double[] prices = new double[4];
-
-		final int numberOfSides = 6;
-		int[] diceSides = new int[numberOfSides];
-
-		System.out.println("prices.length = " + prices.length);
-		System.out.println("diceSides.length = "+ diceSides.length);
-		System.out.println("diceSides[0] = " + diceSides[0]);
-
-//		String arrays
-		String[] myBag = {"Gun", "Sword", "Shield", "Battle Ax"};
-		System.out.println(myBag[2]);
-//		iterating through the arrays
-//		for(int i = 0; i < myBag.length; i++){
-//			System.out.println(myBag[i]);
-//		}
-//		Alternate for the for loop
-//		for(String weapon : myBag){
-//			System.out.println(weapon);
-//		}
-//		Empty array
-		String[] backpack = new String[12];
-		System.out.println(backpack);
-
-
-//		Arrays.fill was for a single value
-//		Arrays.fill(backpack, "med-kit");
-//		System.out.println(backpack);
-//		for(String pack : backpack){
-//			System.out.println(pack);
-//		}
-//Searching in an array
-
-
-//		Two-dimensional Arrays
-		int[][] matrix = {
-				{1, 2, 3}, //arr 1
-				{4, 5, 6}, //arr2
-				{7, 8, 9} //arr3 these are the ELEMENTS of the outer array
-		};
-		System.out.println("martix[0] = " + Arrays.toString(matrix[0]));
-		System.out.println("martix[0][0] = " + matrix[0][0]);
-		for(int[] row : matrix){
-			System.out.println("+---+---+---+");
-			System.out.print("| ");
-			for (int n : row) {
-				System.out.print(n + " | ");
-			}
-			System.out.println();
-
-		}
-		System.out.println("+---+---+---+");
-
-//		Exercise
-		int[] numbers = {1, 2, 3, 4, 5};
-		System.out.println(numbers);
-
-
+	public static Person[] addPerson(Person[] Person, Person name) {
+		Person[] newPerson = Arrays.copyOf(Person, Person.length + 1);
+		newPerson[newPerson.length - 1] = name;
+		return newPerson;
 
 	}
 
 
+	public static void main(String[] args){
+		Person[] Person = new Person[4];
+		Person[0] = new Person("Jackie");
+		Person[1] = new Person("Ian");
+		Person[2] = new Person("Adamina");
+
+//		System.out.println(Person);
+
+//		Person = addPerson(Person, "ian" );
+		for(Person name : Person) {
+			System.out.println(name);
+		}
+
+
+
+		Person newPerson = new Person("Nick");
+		for(Person name : Person){
+			System.out.println(name);
+			Person = addPerson( Person, newPerson);
+		}
 
 
 
@@ -75,4 +38,6 @@ public class ArraysExercises {
 
 
 
+
+	}
 }

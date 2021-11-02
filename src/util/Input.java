@@ -38,13 +38,19 @@ public int getInt(String prompt){
 		return getInt(prompt);
 	}
 }
+	public double getDouble(){
+		return this.scanner.nextDouble();
+	}
 
 public double getDouble(double min, double max){
-	return scanner.nextDouble();
+	Double userDouble;
+	do{
+		System.out.printf("Please enter a decimal integer between %f and %f: %n" , min, max);
+		userDouble = this.scanner.nextDouble();
+	} while (userDouble > max || userDouble < min);
+	return userDouble;
 }
-public double getDouble(){
-	return scanner.nextDouble();
-}
+
 
 
 

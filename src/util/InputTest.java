@@ -25,9 +25,9 @@ public class InputTest {
 		int numintMinMax = in.getInt(1,4);
 		System.out.println(numintMinMax);
 
-		System.out.println("Give me a double");
-		double doubleMinMax = in.getDouble(1, 4);
-		System.out.println(doubleMinMax);
+//		System.out.println("Give me a double");
+//		double doubleMinMax = in.getDouble(1, 4);
+//		System.out.println(doubleMinMax);
 
 		System.out.println("Give me a double");
 		double doubleNum = in.getDouble();

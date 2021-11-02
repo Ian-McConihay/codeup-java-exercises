@@ -1,4 +1,6 @@
 package util;
+import java.awt.*;
+import java.lang.annotation.AnnotationFormatError;
 import java.util.Scanner;
 public class Input {
 
@@ -11,32 +13,32 @@ public String getString(){
 	return scanner.nextLine();
 }
 public boolean yesNo(){
-
-	if (scanner.hasNext("y")) {
-		return true;
-	} else if (scanner.hasNext("yes")) {
-		return true;
-	} else if (scanner.hasNext("Y")) {
-		return true;
-	} else if (scanner.nextLine().equalsIgnoreCase("yes")) {
-		return true;
-	}
-	return false;
-//	case "yes":
-//	yn = false;
-//	break;
-//	case "no":
-//	yn = true;
-//	break;
-//	return scanner.hasNext();
-//	return Boolean.parseBoolean(scanner.nextLine());
+	String capture = scanner.nextLine();
+	return capture.equalsIgnoreCase("y") || capture.equalsIgnoreCase("yes");
 }
+	public boolean yesNo(String prompt){
+		System.out.println(prompt);
+		String capture = scanner.nextLine();
+		return capture.equalsIgnoreCase("y") || capture.equalsIgnoreCase("yes");
+	}
+
 public int getInt(int min, int max){
 	return scanner.nextInt();
 }
 public int getInt(){
 	return scanner.nextInt();
 }
+
+public int getInt(String prompt){
+	try{
+		System.out.println(prompt);
+		return Integer.parseInt(getString());
+	} catch(NumberFormatException nfe) {
+		System.err.println("invalid input");
+		return getInt(prompt);
+	}
+}
+
 public double getDouble(double min, double max){
 	return scanner.nextDouble();
 }

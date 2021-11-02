@@ -30,9 +30,9 @@ public class Rectangle {
 	}
 
 	public String getPerimeter(){
-		return "Perimeter = " + getLength() * 2 + getWidth() * 2;
+		return "Perimeter = " + ((getLength() * 2) + (getWidth() * 2));
 	}
 	public String getArea(){
-		return "Area = " + getLength() * getWidth();
+		return "Area = " + (getLength() * getWidth());
 	}
 }

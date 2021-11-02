@@ -3,6 +3,11 @@ public class Employee extends Person {
 	public Employee(String employeeName){
 		super(employeeName);
 	}
+
+	public Employee() {
+
+	}
+
 	public void sayHello(){
 		System.out.println("Welcome to the game.");
 	}
@@ -21,6 +26,7 @@ public class Employee extends Person {
 		ian.sayHello();
 		mrIan.doWork();
 	}
+
 
 
 }

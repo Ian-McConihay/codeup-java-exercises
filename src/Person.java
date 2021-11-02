@@ -2,8 +2,15 @@ import util.Input;
 
 public class Person {
 	private String name;
+	protected int age;
+//	public String name;
+//	empty constructor.
+	public Person(){};
 
-	public Person(String name) {
+
+	public Person(String name ) {
+//		this.age = age;
+		this.name = name;
 	}
 
 	public String getName(){

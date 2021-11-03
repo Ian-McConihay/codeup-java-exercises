@@ -4,33 +4,34 @@ import java.util.Scanner;
 
 public class BankApp {
 	public static void main(String[] args) {
-
-
-
-
+//		Creating the obj Bank Account
+	BankAccount obj1 = new BankAccount("Ian","8008S");
+	obj1.showMenu();
 
 	}
 }
+
+
 class BankAccount{
 	int balance;
 	int previousTransaction;
 	String customerName;
 	String customerID;
 
-//	Constroctor same name as class
-	BankAccount(String customerName, String customerID){
-		customerID = customerID;
-		customerName = customerName;
+//	Constructor same name as class
+	BankAccount(String cName, String cID){
+		customerID = cID;
+		customerName = cName;
 	}
 
-	void deposite(int amount){
+	void deposit(int amount){
 		if(amount != 0){
 			balance = balance + amount;
 			previousTransaction = amount;
 		}
 	}
-	void withdrawl(int amount){
-		if(amount != 0){
+	void withdrawal(int amount){
+		if(amount != 0 && amount <= balance){
 			balance = balance - amount;
 			previousTransaction = -amount;
 		}
@@ -46,41 +47,54 @@ class BankAccount{
 		}
 	}
 
-	void showMenu(){
-	char option = '\0';
+	void showMenu() {
+		char option = '\0';
 		Scanner scanner = new Scanner(System.in);
 
 		System.out.println("Welcome " + customerName);
 		System.out.println("Your ID is: " + customerID);
 		System.out.println("\n");
+			do {
 		System.out.println("A. Check Balance");
 		System.out.println("B. Deposit");
 		System.out.println("C. Withdraw");
 		System.out.println("D. Previous transaction");
 		System.out.println("E. Exit");
 
-		do {
-		System.out.println("====================");
-		System.out.println("Select a menu option");
-		System.out.println("====================");
-		option = scanner.next().charAt(0);
-		System.out.println("\n");
+			System.out.println("====================");
+			System.out.println("Select a menu option");
+			System.out.println("====================");
+			option = scanner.next().charAt(0);
+			System.out.println("\n");
 
-		switch (option){
-			case 'A':
-				System.out.println("Balance = "+balance);
-				break;
-			case 'B':
-				System.out.println("Enter an amount to deposit:");
-				int amount = scanner.nextInt();
-				deposite(amount);
-				break;
-			case 'C':
-
-
+			switch (option) {
+				case 'A':
+					System.out.println("Balance = " + balance);
+					break;
+				case 'B':
+					System.out.println("Enter an amount to Deposit:");
+					int amount = scanner.nextInt();
+					deposit(amount);
+					break;
+				case 'C':
+					System.out.println("Enter a Withdraw amount: ");
+					int amountOne = scanner.nextInt();
+					withdrawal(amountOne);
+					break;
+				case 'D':
+					System.out.println("Your Previous transaction was: ");
+					getPreviousTransaction();
+					break;
+				case 'E':
+					System.out.println("===========================");
+					break;
+				default:
+					System.out.println("Invalid Option. Please Enter a valid menu option");
+					break;
+			}
+		} while (option != 'E');
+		System.out.println("Thank You for banking with TITAN");
 	}
-
-
 
 
 

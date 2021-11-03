@@ -8,6 +8,13 @@ public class BankApp {
 	BankAccount obj1 = new BankAccount("Ian","8008S");
 	obj1.showMenu();
 
+
+//	Nested CLasses
+//	It's a logical way of grouping classes that need to be used in one place
+//	Nested classes increase encapsulation and allow the code to be read easier and maintainable
+
+
+
 	}
 }
 
@@ -65,7 +72,7 @@ class BankAccount{
 			System.out.println("Select a menu option");
 			System.out.println("====================");
 			option = scanner.next().charAt(0);
-			System.out.println("\n");
+//			System.out.println("\n");
 
 			switch (option) {
 				case 'A':

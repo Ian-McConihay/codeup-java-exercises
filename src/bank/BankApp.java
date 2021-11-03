@@ -1,5 +1,7 @@
 package bank;
 
+import java.util.Scanner;
+
 public class BankApp {
 	public static void main(String[] args) {
 
@@ -45,6 +47,36 @@ class BankAccount{
 	}
 
 	void showMenu(){
+	char option = '\0';
+		Scanner scanner = new Scanner(System.in);
+
+		System.out.println("Welcome " + customerName);
+		System.out.println("Your ID is: " + customerID);
+		System.out.println("\n");
+		System.out.println("A. Check Balance");
+		System.out.println("B. Deposit");
+		System.out.println("C. Withdraw");
+		System.out.println("D. Previous transaction");
+		System.out.println("E. Exit");
+
+		do {
+		System.out.println("====================");
+		System.out.println("Select a menu option");
+		System.out.println("====================");
+		option = scanner.next().charAt(0);
+		System.out.println("\n");
+
+		switch (option){
+			case 'A':
+				System.out.println("Balance = "+balance);
+				break;
+			case 'B':
+				System.out.println("Enter an amount to deposit:");
+				int amount = scanner.nextInt();
+				deposite(amount);
+				break;
+			case 'C':
+
 
 	}
 

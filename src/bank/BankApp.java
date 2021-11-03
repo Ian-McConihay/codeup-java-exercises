@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class BankApp {
 	public static void main(String[] args) {
 //		Creating the obj Bank Account
-	BankAccount obj1 = new BankAccount("Ian","8008S");
+	BankAccount obj1 = new BankAccount("Ian","9001");
 	obj1.showMenu();
 
 

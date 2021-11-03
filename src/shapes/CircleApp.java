@@ -8,6 +8,8 @@ public class CircleApp {
 		double radius = input.getDouble();
 		Circle circle = new Circle(radius);
 		double circumference = circle.getCircumference();
-		double area =
+		double area = circle.getArea();
+		System.out.println("The radius is " + radius);
+		System.out.println(" circle circumference is " + circumference + " and the area is " + area);
 	}
 }

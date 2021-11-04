@@ -9,16 +9,14 @@ abstract class Quadrilateral extends Shape {
 		this.length = width;
 	}
 
+//	Setters
 	public abstract void setWidth(double width);
-
-
-
 	public abstract void setLength(double length);
 
+//	Getters
 	public double getLength() {
 		return length;
 	}
-
 	public double getWidth() {
 		return width;
 	}

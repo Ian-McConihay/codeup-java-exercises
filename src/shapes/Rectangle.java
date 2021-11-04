@@ -2,37 +2,29 @@ package shapes;
 
 import java.security.PublicKey;
 
-public class Rectangle {
-	protected int length;
-	protected int width;
+public class Rectangle extends Quadrilateral {
 
-//	Constructor
-	public Rectangle(int width, int length){
-		this.length = length;
-		this.width = width;
+	public Rectangle(double length, double width) {
+		super(length, width);
 	}
 
-//	Setters
-	public void setLength(int length){
-		this.length = length;
-	}
-	public void setWidth(int width) {
-		this.width = width;
+	@Override
+	public void setWidth(double width) {
+
 	}
 
-//	Getters
-	public int getLength(){
-		return length;
+	@Override
+	public void setLength(double length) {
+
 	}
 
-	public int getWidth() {
-		return width;
+	@Override
+	public double getPerimeter() {
+		return 0;
 	}
 
-	public String getPerimeter(){
-		return "Perimeter = " + ((getLength() * 2) + (getWidth() * 2));
-	}
-	public String getArea(){
-		return "Area = " + (getLength() * getWidth());
+	@Override
+	public double getArea() {
+		return 0;
 	}
 }

@@ -11,3 +11,6 @@ public class ShapesTest {
 		System.out.println("Square: " + myShape.getArea());
 	}
 }
+//Q9 Because the interface calls the method but does not get the variable
+
+//Q10

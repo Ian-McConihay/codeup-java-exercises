@@ -10,9 +10,9 @@ public class Student {
 	private ArrayList<Integer> grades;
 
 
-	public Student(String studentName, int grades) {
+	public Student(String studentName, ArrayList<Integer> studentGrades) {
 		this.studentName = studentName;
-		this.grades = new ArrayList<>(grades);
+		this.grades = studentGrades;
 
 	}
 
@@ -27,9 +27,11 @@ public class Student {
 	}
 
 	//	 returns the average of the students grades
-	public double getGradeAverage(double grades[]) {
+	public double getGradeAverage() {
+		double average = 0;
 		for(double grade : grades)
-		return grade / 100;
+		average += grade;
+		return Math.round(average / grades.size());
 	}
 
 	public static void main(String[] args) {
@@ -38,7 +40,7 @@ public class Student {
 		bob.addGrade(85);
 		bob.addGrade(75);
 		System.out.println("Bobs grades: " + bob.grades);
-//		System.out.println(bob.getGradeAverage(bob.grades));
+		System.out.println(bob.getGradeAverage());
 
 	}
 

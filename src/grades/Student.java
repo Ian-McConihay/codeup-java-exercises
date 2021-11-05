@@ -39,6 +39,7 @@ public class Student {
 		Student bob = new Student("Bob", new ArrayList<>());
 		bob.addGrade(85);
 		bob.addGrade(75);
+		bob.addGrade(56);
 		System.out.println("Bobs grades: " + bob.grades);
 		System.out.println(bob.getGradeAverage());
 

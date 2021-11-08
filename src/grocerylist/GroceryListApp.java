@@ -96,7 +96,7 @@ class Cart {
 					break;
 			}
 		} while (option != 'E');
-		System.out.println("List Completed: " + cart);
+		System.out.println("List Completed: \n" + cart);
 	}
 
 }

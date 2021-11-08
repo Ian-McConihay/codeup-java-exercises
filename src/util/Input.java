@@ -12,6 +12,8 @@ private Scanner scanner = new Scanner(System.in);
 public String getString(){
 	return scanner.nextLine();
 }
+
+
 public boolean yesNo(){
 	String capture = scanner.nextLine();
 	return capture.equalsIgnoreCase("y") || capture.equalsIgnoreCase("yes");
@@ -22,13 +24,10 @@ public boolean yesNo(){
 		return capture.equalsIgnoreCase("y") || capture.equalsIgnoreCase("yes");
 	}
 
+
 public int getInt(int min, int max){
 	return scanner.nextInt();
 }
-public int getInt(){
-	return scanner.nextInt();
-}
-
 public int getInt(String prompt){
 	try{
 		System.out.println(prompt);
@@ -38,9 +37,21 @@ public int getInt(String prompt){
 		return getInt(prompt);
 	}
 }
-	public double getDouble(){
-		return this.scanner.nextDouble();
+
+
+public double getDouble(){
+	return this.scanner.nextDouble();
+}
+public double getDouble(String prompt){
+	try{
+		System.out.println(prompt);
+		return Double.parseDouble(getString());
+	} catch(NumberFormatException nfe) {
+		System.err.println("invalid input");
+		return getDouble(prompt);
 	}
+}
+
 
 public double getDouble(double min, double max){
 	Double userDouble;

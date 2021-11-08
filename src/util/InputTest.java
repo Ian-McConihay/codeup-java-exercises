@@ -21,26 +21,26 @@ public class InputTest {
 //			e.printStackTrace();
 //		}
 
-		try{
-		String nullStr = null;
-		System.out.println(nullStr.toLowerCase());
-//			throw new RuntimeException("Something went wrong!! \n (StarWars alarm)");
-		} catch(NullPointerException e) {
-			e.printStackTrace();
-			e.getMessage();
-		} catch	(RuntimeException e){
-			System.out.println("Runtime Exception");
-			e.printStackTrace();
-			e.getMessage();
-		}catch (Exception e){
-			System.out.println("Generic Exception");
-			e.printStackTrace();
-			e.getMessage();
-		} finally
-
-	{
-		System.out.println("This will Always run");
-	}
+//		try{
+//		String nullStr = null;
+//		System.out.println(nullStr.toLowerCase());
+////			throw new RuntimeException("Something went wrong!! \n (StarWars alarm)");
+//		} catch(NullPointerException e) {
+//			e.printStackTrace();
+//			e.getMessage();
+//		} catch	(RuntimeException e){
+//			System.out.println("Runtime Exception");
+//			e.printStackTrace();
+//			e.getMessage();
+//		}catch (Exception e){
+//			System.out.println("Generic Exception");
+//			e.printStackTrace();
+//			e.getMessage();
+//		} finally
+//
+//	{
+//		System.out.println("This will Always run");
+//	}
 
 
 
@@ -62,8 +62,8 @@ public class InputTest {
 
 
 //		System.out.println("Give me an int");
-//		int numint = in.getInt();
-//		System.out.println(numint);
+		int numint = in.getInt("Need a number");
+		System.out.println(numint);
 
 //		System.out.println("Give me an int");
 //		int numintMinMax = in.getInt(1,4);
@@ -74,7 +74,7 @@ public class InputTest {
 //		System.out.println(doubleMinMax);
 
 //		System.out.println("Give me a double");
-//		double doubleNum = in.getDouble();
-//		System.out.println(doubleNum);
+		double doubleNum = in.getDouble("Give me a double");
+		System.out.println(doubleNum);
 	}
 }

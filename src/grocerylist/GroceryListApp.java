@@ -1,5 +1,8 @@
 package grocerylist;
+import util.Input;
+
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 
 
@@ -9,6 +12,9 @@ public class GroceryListApp {
 
 		Cart shoppinglist = new Cart("Ian",new ArrayList<>() );
 		shoppinglist.showMenu();
+
+
+
 
 	}
 }
@@ -34,8 +40,24 @@ class Cart {
 
 
 	void showMenu() {
+//		ArrayList<ArrayList<String>> categories = new ArrayList<>();
+//		ArrayList<String> meatlist = new ArrayList();
+//		meatlist.add("Fish");
+//		meatlist.add("Beef");
+//		meatlist.add("Chicken");
+
+		boolean confirm = true;
+		confirm = new Input().yesNo("Would you like tp make a grocery list? [y/N]");
+		if(confirm == false)
+			System.exit(0);
+		System.out.println(confirm);
+
+
+
+
+//		useDelimiter allows spaces to be used in a single string
 		char option = '\0';
-		Scanner scanner = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in).useDelimiter("\n");
 
 		System.out.println("\n Welcome " + customerName);
 		do {
@@ -44,6 +66,7 @@ class Cart {
 			System.out.println("C. Remove Item");
 			System.out.println("E. Finish list");
 
+//			chatAt(0) allows the scanner to capture the char at position 0
 			option = scanner.next().charAt(0);
 
 			switch (option) {
@@ -53,12 +76,17 @@ class Cart {
 				case 'B':
 					System.out.println("Enter an item to add to cart:");
 					String item = scanner.next();
+//					String name ="";
+//					name+=scanner.next();
 					addItem(item);
 					break;
 				case 'C':
 					System.out.println("Enter a item to remove from cart: ");
 					String itemOne = scanner.next();
 					removeItem(itemOne);
+					break;
+				case 'D':
+					System.out.println("categories");
 					break;
 				case 'E':
 					System.out.println("===========================");

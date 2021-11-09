@@ -25,6 +25,12 @@ public boolean yesNo(){
 	}
 
 
+//	NumberFormatException occurs when converting a string into a number. If its not a string number it will catch
+
+//	public int getInt(){
+//		return scanner.nextInt();
+//	}
+
 public int getInt(int min, int max){
 	return scanner.nextInt();
 }
@@ -38,6 +44,16 @@ public int getInt(String prompt){
 	}
 }
 
+	public String getBinary(String prompt){
+		try{
+			System.out.println(prompt);
+			int input = scanner.nextInt();
+			return Integer.toBinaryString(input);
+		} catch(NumberFormatException nfe) {
+			System.err.println("invalid input");
+			return getBinary(prompt);
+		}
+	}
 
 public double getDouble(){
 	return this.scanner.nextDouble();
@@ -51,6 +67,9 @@ public double getDouble(String prompt){
 		return getDouble(prompt);
 	}
 }
+
+
+
 
 
 public double getDouble(double min, double max){

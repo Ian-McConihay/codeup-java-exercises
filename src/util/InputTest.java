@@ -59,22 +59,30 @@ public class InputTest {
 //
 //		System.out.println(yn);
 
-
-
 //		System.out.println("Give me an int");
-		int numint = in.getInt("Need a number");
-		System.out.println(numint);
+
+
+
+//		int numInt = in.getInt("Need a number");
+//		System.out.println(numInt);
+
+
 
 //		System.out.println("Give me an int");
 //		int numintMinMax = in.getInt(1,4);
 //		System.out.println(numintMinMax);
-
 //		System.out.println("Give me a double");
 //		double doubleMinMax = in.getDouble(1, 4);
 //		System.out.println(doubleMinMax);
-
 //		System.out.println("Give me a double");
-		double doubleNum = in.getDouble("Give me a double");
-		System.out.println(doubleNum);
+
+
+
+//		double doubleNum = in.getDouble("Give me a double");
+//		System.out.println(doubleNum);
+
+
+		String hex = in.getBinary("Give me a num");
+		System.out.println(hex);
 	}
 }
